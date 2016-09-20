@@ -43,6 +43,7 @@ rm wordpress.sql
     echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!installing Drupal !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     
 cd /var/www/html 
+echo "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&"
  drupal site:install standard \
 	--langcode en \
 	--site-name="Drupal 8" \
