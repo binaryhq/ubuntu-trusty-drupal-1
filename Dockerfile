@@ -67,7 +67,6 @@ RUN mkdir -p /var/www/html/sites/default/files && \
 	chmod 0664 /var/www/html/sites/default/services.yml && \
 	chown -R www-data:www-data /var/www/html/
 
-
 #Environment variables to configure php
 ENV PHP_UPLOAD_MAX_FILESIZE 10M
 ENV PHP_POST_MAX_SIZE 10M
