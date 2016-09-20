@@ -44,12 +44,12 @@ replace MYSQL_DBNAME $DBNAME -- /var/www/html/wp-config.php
 replace MYSQL_USER $DBUSER -- /var/www/html/wp-config.php
 replace MYSQL_PASS $DBPASS -- /var/www/html/wp-config.php
 
-mysql -uroot $DBNAME < wordpress.sql
+#mysql -uroot $DBNAME < wordpress.sql
 
 rm wordpress.sql
 # You can create a /mysql-setup.sh file to intialized the DB
-if [ -f /mysql-setup.sh ] ; then
-  . /mysql-setup.sh
+if [ -f /install-drupal-standard.sh ] ; then
+  . /install-drupal-standard.sh
 fi
 
 echo "=> Done!"
