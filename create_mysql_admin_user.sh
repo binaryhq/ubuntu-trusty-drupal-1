@@ -41,7 +41,7 @@ rm wordpress.sql
 # You can create a /mysql-setup.sh file to intialized the DB
 #if [ -f /install-drupal-standard.sh ] ; then
     echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!installing Drupal !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-  . /install-drupal-standard.sh 
+  /install-drupal-standard.sh 
 #fi
 
 echo "=> Done!"
