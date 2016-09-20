@@ -39,10 +39,10 @@ mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO '$DBUSER'@'%' WITH GRANT OPTION"
 
 rm wordpress.sql
 # You can create a /mysql-setup.sh file to intialized the DB
-if [ -f /install-drupal-standard.sh ] ; then
+#if [ -f /install-drupal-standard.sh ] ; then
     echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!installing Drupal !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
   . /install-drupal-standard.sh 
-fi
+#fi
 
 echo "=> Done!"
 
