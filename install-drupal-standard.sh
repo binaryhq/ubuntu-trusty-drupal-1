@@ -1,7 +1,6 @@
 #!/bin/bash
 
-cd /var/www/html && \
-drupal site:install standard \
+cd /var/www/html && drupal site:install standard \
 	--langcode en \
 	--site-name="Drupal 8" \
 	--db-type='mysql' \
