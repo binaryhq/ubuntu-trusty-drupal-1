@@ -34,23 +34,15 @@ echo "================================================================ "
 mysql -uroot -e "CREATE DATABASE $DBNAME"
 mysql -uroot -e "CREATE USER '$DBUSER'@'%' IDENTIFIED BY '$DBPASS'"
 mysql -uroot -e "GRANT ALL PRIVILEGES ON *.* TO '$DBUSER'@'%' WITH GRANT OPTION"
-replace DOMAINNAMEHERE $VIRTUAL_HOST -- wordpress.sql
-replace SITETITLEHERE $VIRTUAL_HOST -- wordpress.sql
-replace USERNAMEHERE $WP_USER -- wordpress.sql
-replace PASSWORDHERE $WP_PASS -- wordpress.sql
-replcae USEREMAILHERE@EMAIL.COM $USER_EMAIL -- wordpress.sql
-
-replace MYSQL_DBNAME $DBNAME -- /var/www/html/wp-config.php
-replace MYSQL_USER $DBUSER -- /var/www/html/wp-config.php
-replace MYSQL_PASS $DBPASS -- /var/www/html/wp-config.php
 
 #mysql -uroot $DBNAME < wordpress.sql
 
 rm wordpress.sql
 # You can create a /mysql-setup.sh file to intialized the DB
-#if [ -f /install-drupal-standard.sh ] ; then
-  /install-drupal-standard.sh
-#fi
+if [ -f /install-drupal-standard.sh ] ; then
+    echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!installing Drupal !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+  /install-drupal-standard.sh 
+fi
 
 echo "=> Done!"
 
