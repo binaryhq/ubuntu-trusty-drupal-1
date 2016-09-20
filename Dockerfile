@@ -53,8 +53,7 @@ RUN drupal init --override
 
 # Install Drupal.
 RUN rm -rf /var/www/html
-RUN cd /var/www && \
-	drupal site:new html 8.1.8
+
 RUN mkdir -p /var/www/html/sites/default/files && \
 	chmod a+w /var/www/html/sites/default -R && \
 	mkdir /var/www/html/sites/all/modules/contrib -p && \
@@ -67,6 +66,10 @@ RUN mkdir -p /var/www/html/sites/default/files && \
 	chmod 0664 /var/www/html/sites/default/services.yml && \
 	chown -R www-data:www-data /var/www/html/
 
+
+RUN cd /var/www && \
+	drupal site:new html 8.1.8
+	
 #Environment variables to configure php
 ENV PHP_UPLOAD_MAX_FILESIZE 10M
 ENV PHP_POST_MAX_SIZE 10M
