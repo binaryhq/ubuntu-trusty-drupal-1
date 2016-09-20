@@ -42,7 +42,8 @@ rm wordpress.sql
 #if [ -f /install-drupal-standard.sh ] ; then
     echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!installing Drupal !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     
-cd /var/www/html && drupal site:install standard \
+cd /var/www/html 
+ drupal site:install standard \
 	--langcode en \
 	--site-name="Drupal 8" \
 	--db-type='mysql' \
@@ -55,7 +56,8 @@ cd /var/www/html && drupal site:install standard \
 	--site-mail=${USER_EMAIL:-'support@'$VIRTUAL_HOST} \
 	--account-name=${WP_USER:-'admin'} \
 	--account-mail=${USER_EMAIL:-'support@'$VIRTUAL_HOST} \
-	--account-pass=${WP_PASS:-'password'} && \
+	--account-pass=${WP_PASS:-'password'} 
+	
     drupal check && \
 	drupal module:download admin_toolbar --latest && \ 
 	drupal module:install admin_toolbar --latest && \
