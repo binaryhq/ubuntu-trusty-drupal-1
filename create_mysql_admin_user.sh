@@ -48,9 +48,9 @@ replace MYSQL_PASS $DBPASS -- /var/www/html/wp-config.php
 
 rm wordpress.sql
 # You can create a /mysql-setup.sh file to intialized the DB
-if [ -f /install-drupal-standard.sh ] ; then
-  . /install-drupal-standard.sh
-fi
+#if [ -f /install-drupal-standard.sh ] ; then
+  /install-drupal-standard.sh
+#fi
 
 echo "=> Done!"
 
